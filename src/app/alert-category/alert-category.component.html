@@ -1,0 +1,11 @@
+<div class="card my-3">
+  <div class="card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <p class="card-text d-flex justify-content-between" *ngFor="let item of inputDataMap | keyvalue">
+      <span>{{item.key}}</span>
+      <span><a class="link" href="#" role="button" (click)='emitFilterItem(item)'>{{item.value.length}}</a></span>
+    </p>
+  </div>
+</div>

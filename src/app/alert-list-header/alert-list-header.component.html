@@ -1,0 +1,12 @@
+<div class="bg-secondary text-white p-2 fs-3">Total Alerts Count: {{ count }}</div>
+<div class="alert alert-secondary fs-4">
+  Filters
+  <span *ngFor="let filter of filterKeyValuePair | keyvalue" class="d-inline bg-white ml-3 p-1 mx-1 fs-6">
+    {{ filter.key }} = {{ filter.value }}
+  </span>
+
+  <a *ngIf="(filterKeyValuePair | keyvalue).length" class="btn btn-primary p-1 float-end" 
+  role="button" (click)='reset()'>
+    Reset
+  </a>
+</div>

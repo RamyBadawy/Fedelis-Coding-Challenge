@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <alert-list-header [filterKeyValuePair]="filtersMap" [count]="totalCount" (resetClicked)='resetReceived($event)'></alert-list-header>
+      <alert-category [title]="'Severity'" [inputDataMap]="severityMap" (emitSelectedfilters)='filterReceived($event)'></alert-category>
+      <alert-category [title]="'Client IP'" [inputDataMap]="clientIpMap" (emitSelectedfilters)='filterReceived($event)'></alert-category>
+      <alert-category [title]="'Protocol'" [inputDataMap]="protocolMap" (emitSelectedfilters)='filterReceived($event)'></alert-category>
+      <alert-category [title]="'Client Country'" [inputDataMap]="clientCountryMap" (emitSelectedfilters)='filterReceived($event)'></alert-category>
+    </div>
+  </div>
+</div>
