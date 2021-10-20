@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { groupBy, map, mergeMap, tap, toArray } from 'rxjs/operators'
+import { groupBy, map, mergeMap, take, tap, toArray } from 'rxjs/operators'
 import { Observable, of, zip } from 'rxjs';
 import { ProviderService } from '../service/provider-service.service';
 import { IAlert } from '../model/common-interfaces.interface';
@@ -64,6 +64,7 @@ export class AppComponent implements OnInit {
   protected loadAlerts(): void {
     this.providerService.getAllAlerts()
       .pipe(
+        take(1),
         // unwind the array
         mergeMap((alerts: Array<IAlert>) => {
           this.allAlerts = alerts;
