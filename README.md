@@ -1,2 +1,2 @@
-# Fedelis-Coding_Challenge
+# Fedelis-Coding-Challenge
 A good UI challenge
